@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "lib": ["dom", "es6", "es2022", "esnext.asynciterable"],
+    "declaration": true,
+    "outDir": "dist",
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "rootDir": "./lib",
+    "baseUrl": "./"
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
