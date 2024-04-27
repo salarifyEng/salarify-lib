@@ -59,6 +59,9 @@ export class CountryDto {
 
 export class EmailDto {
   @IsNotEmpty()
+  to: string;
+
+  @IsNotEmpty()
   mailType: string;
 
   @IsNotEmpty()

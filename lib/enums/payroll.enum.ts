@@ -1,20 +1,21 @@
-export enum PayrollTypes {
-  regular = 'regular',
-  contract = 'contract',
+export enum PayrollType {
+  Regular = "regular",
+  Contract = "contract",
+  OffCycle = "offCycle",
 }
 
 export enum PayrollStatus {
-  draft = 'draft',
-  created = 'created',
-  completed = 'completed',
-  cancelled = 'cancelled',
-  uncompleted = 'uncompleted',
-  processing = 'processing',
+  draft = "draft",
+  approved = "approved",
+  completed = "completed",
+  cancelled = "cancelled",
+  uncompleted = "uncompleted",
+  processing = "processing",
 }
 
 export enum PayrollFrequency {
-  monthly = 'monthly',
-  weekly = 'weekly',
-  biweekly = 'biweekly',
-  nocycle = 'nocycle',
+  monthly = "monthly",
+  weekly = "weekly",
+  biweekly = "biweekly",
+  nocycle = "nocycle",
 }

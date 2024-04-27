@@ -72,7 +72,7 @@ export class UpdatePayrollDto {
   // @IsNotEmpty()
   // currency: string;
 
-  @IsIn([PayrollStatus.draft, PayrollStatus.created])
+  @IsIn([PayrollStatus.draft, PayrollStatus.approved])
   @IsString()
   status: string;
 
