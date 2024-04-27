@@ -171,25 +171,3 @@ export class BusinessSetting extends Document {
   })
   autoPayroll: boolean;
 }
-
-export class UpdateBusinessSettingsDto implements Partial<BusinessSetting> {
-  @ApiProperty()
-  @IsOptional()
-  @IsIn(Object.keys(Currency))
-  payrollCurrency?: Currency;
-
-  @ApiProperty()
-  @IsOptional()
-  @IsIn(Object.keys(PayrollFrequency))
-  payrollFrequency?: PayrollFrequency;
-
-  @ApiProperty()
-  @IsOptional()
-  @IsNumber()
-  preferredPayDate?: number;
-
-  @ApiProperty()
-  @IsOptional()
-  @IsBoolean()
-  autoPayroll?: boolean;
-}

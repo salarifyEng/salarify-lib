@@ -17,41 +17,50 @@ class AllowanceDTO {
   @IsNotEmpty()
   title: string;
 
+  @IsNotEmpty()
+  type: string;
+
   @IsNumber()
   @IsNotEmpty()
-  percentage: number;
+  value: number;
 
   @IsOptional()
+  @IsBoolean()
   isActive: boolean;
+
+  @IsOptional()
+  @IsBoolean()
+  isDefault: boolean;
 }
 
-export class PayrollSettingsDTO {
-  @IsOptional()
+export class PayrollSettingDTO {
+  @IsNotEmpty()
   @IsMongoId()
   businessId: string;
 
-  @IsNotEmpty()
+  @IsOptional()
   currency: string;
 
-  @IsNotEmpty()
+  @IsOptional()
   @IsIn(Object.values(PayrollFrequency))
   frequency: string;
 
-  @IsNotEmpty()
+  @IsOptional()
   @IsDate()
   payDate: string;
 
+  @IsOptional()
   @IsArray()
   @ValidateNested()
   @Type(() => AllowanceDTO)
   @ArrayUnique((obj: AllowanceDTO) => obj.title) // Ensure unique titles
   allowances: AllowanceDTO;
 
-  @IsNotEmpty()
+  @IsOptional()
   @IsBoolean()
   shouldCalculateTax: string;
 
-  @IsNotEmpty()
+  @IsOptional()
   @IsBoolean()
   shouldRemitTax: string;
 }

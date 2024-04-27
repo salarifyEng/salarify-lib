@@ -1,6 +1,6 @@
 {
   "name": "salarify-lib",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Salarify Library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

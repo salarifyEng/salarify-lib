@@ -32,6 +32,7 @@ export * from "./dtos/payment-plans.dto";
 export * from "./dtos/payment.dto";
 export * from "./dtos/payroll-adjustment.dto";
 export * from "./dtos/payroll.dto";
+export * from "./dtos/payroll-setting.dto";
 export * from "./dtos/registration-type.dto";
 export * from "./dtos/users.dto";
 export * from "./dtos/wallet.dto";
