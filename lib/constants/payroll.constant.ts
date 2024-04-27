@@ -1,3 +1,4 @@
+import { AllowanceDTO } from "lib/dtos/payroll-setting.dto";
 import { RangeType } from "lib/enums/range.type.enum";
 
 export const ATTEMPTS = 3; // number of retries
@@ -17,20 +18,20 @@ export const DEFAULT_ALLOWANCES = [
     type: RangeType.PERCENTAGE,
     value: 15,
     isActive: true,
-    isDefalut: true,
+    isDefault: true,
   },
   {
     title: "Housing Allowance",
     type: RangeType.PERCENTAGE,
     value: 5,
     isActive: true,
-    isDefalut: true,
+    isDefault: true,
   },
   {
     title: "Transportation Allowance",
     type: RangeType.PERCENTAGE,
     value: 15,
     isActive: true,
-    isDefalut: true,
+    isDefault: true,
   },
-];
+] as AllowanceDTO[];

@@ -150,24 +150,3 @@ export class UpdateBusinessStatusDto {
   @IsNotEmpty()
   comment: string;
 }
-
-export class BusinessSetting extends Document {
-  @Prop({ type: String, default: 28 })
-  preferredPayDate: number;
-
-  @Prop({ type: String, enum: Object.values(Currency), default: Currency.NGN })
-  payrollCurrency: Currency;
-
-  @Prop({
-    type: String,
-    enum: Object.values(PayrollFrequency),
-    default: PayrollFrequency.monthly,
-  })
-  payrollFrequency: PayrollFrequency;
-
-  @Prop({
-    type: Boolean,
-    default: false,
-  })
-  autoPayroll: boolean;
-}

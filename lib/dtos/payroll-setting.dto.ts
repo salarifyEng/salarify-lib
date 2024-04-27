@@ -13,7 +13,7 @@ import {
 } from "class-validator";
 import { PayrollFrequency } from "lib/enums/payroll.enum";
 
-class AllowanceDTO {
+export class AllowanceDTO {
   @IsNotEmpty()
   title: string;
 
@@ -39,28 +39,28 @@ export class PayrollSettingDTO {
   businessId: string;
 
   @IsOptional()
-  currency: string;
+  currency?: string;
 
   @IsOptional()
   @IsIn(Object.values(PayrollFrequency))
-  frequency: string;
+  frequency?: string;
 
   @IsOptional()
   @IsDate()
-  payDate: string;
+  payDate?: string;
 
   @IsOptional()
   @IsArray()
   @ValidateNested()
   @Type(() => AllowanceDTO)
   @ArrayUnique((obj: AllowanceDTO) => obj.title) // Ensure unique titles
-  allowances: AllowanceDTO;
+  allowances?: AllowanceDTO[];
 
   @IsOptional()
   @IsBoolean()
-  shouldCalculateTax: string;
+  shouldCalculateTax?: string;
 
   @IsOptional()
   @IsBoolean()
-  shouldRemitTax: string;
+  shouldRemitTax?: string;
 }
