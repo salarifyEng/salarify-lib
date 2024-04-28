@@ -15,7 +15,7 @@ import {
 } from "class-validator";
 
 import { ApiProperty } from "@nestjs/swagger";
-import { Currency } from "../enums/misc.enum";
+import { Currency, SupportedCountry } from "../enums/misc.enum";
 import { EmployeeTypes } from "../enums/user.enum";
 import { Optional } from "@nestjs/common";
 
@@ -184,4 +184,23 @@ export class PayslipDTO {
   // @IsDate()
   @IsNotEmpty()
   payDate: string;
+}
+
+export class TaxIdentificationDTO {
+  @ApiProperty()
+  @IsIn(Object.values(SupportedCountry))
+  @IsString()
+  country: string;
+
+  @ApiProperty()
+  @IsNotEmpty()
+  @IsString()
+  state: string;
+
+  @ApiProperty()
+  @IsNotEmpty()
+  @IsString()
+  tin: string;
+
+  metadata?: any;
 }

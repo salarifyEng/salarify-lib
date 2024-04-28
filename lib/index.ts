@@ -63,6 +63,7 @@ export * from "./helpers/sendSlackNotification";
 // Interfaces
 export * from "./interfaces/bankDetail.interface";
 export * from "./interfaces/business.interface";
+export * from "./interfaces/business-employee.interface";
 export * from "./interfaces/kyc.interface";
 export * from "./interfaces/misc.interface";
 export * from "./interfaces/pattern.interface";

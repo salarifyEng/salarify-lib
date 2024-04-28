@@ -3,7 +3,7 @@ import * as rs from "randomstring";
 import * as StringSimilarity from "string-similarity";
 import { BANKS } from "../constants/banks.constant";
 import { PhoneNumber } from "../dtos/misc.dto";
-import { IUser } from "lib/interfaces/user.interface";
+import { IUser } from "../interfaces/user.interface";
 
 export const generateRandomValues = (length: number): string => {
   let result = "e";

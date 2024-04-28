@@ -1,16 +1,10 @@
-import { AllowanceDTO } from "lib/dtos/payroll-setting.dto";
-import { RangeType } from "lib/enums/range.type.enum";
+import { AllowanceDTO } from "../dtos/payroll-setting.dto";
+import { RangeType } from "../enums/range.type.enum";
 
 export const ATTEMPTS = 3; // number of retries
 export const BACKOFF = 60000; //Seconds before retry
 export const DELAY = 50000; //Seconds
 export const MINIMUM_NET_SALARY = 100;
-
-// title: string;
-//   type: string;
-//   value: number;
-//   isActive: boolean;
-//   isDefault: boolean;
 
 export const DEFAULT_ALLOWANCES = [
   {

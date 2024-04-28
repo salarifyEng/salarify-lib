@@ -11,7 +11,7 @@ import {
   IsOptional,
   ValidateNested,
 } from "class-validator";
-import { PayrollFrequency } from "lib/enums/payroll.enum";
+import { PayrollFrequency } from "../enums/payroll.enum";
 
 export class AllowanceDTO {
   @IsNotEmpty()
@@ -46,8 +46,8 @@ export class PayrollSettingDTO {
   frequency?: string;
 
   @IsOptional()
-  @IsDate()
-  payDate?: string;
+  @IsNumber()
+  payDate?: number;
 
   @IsOptional()
   @IsArray()
