@@ -26,6 +26,7 @@
     "string-similarity": "^4.0.4"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "publish": "npm publish"
   }
 }

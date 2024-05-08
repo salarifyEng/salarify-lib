@@ -8,6 +8,7 @@ export * from "./constants/kyc.constant";
 export * from "./constants/misc.constant";
 export * from "./constants/onboarding.constant";
 export * from "./constants/payment.constant";
+export * from "./constants/tax.constant";
 
 //Custom Validators
 export * from "./custom-validator/customLength";

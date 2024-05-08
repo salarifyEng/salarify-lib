@@ -25,3 +25,11 @@ export interface IPayrollFailedUpdate {
   body: Record<string, any>;
   payoutId: string;
 }
+
+export interface IAllowance {
+  title: string;
+  type: string;
+  value: number;
+  isActive: boolean;
+  isDefault: boolean;
+}
